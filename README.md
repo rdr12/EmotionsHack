@@ -1,32 +1,43 @@
+//MODIFICAR
 # EmotionsHack
 
-## Description
 
-Kraken-Brigade is a game where the player has to move ships horizontally and shoot up incoming tentacles that appear from the top of the screen and move to the bottom. The game ends when four tentacles get stacked in front of the fort wall. After that, a score is calculated based on tentacle destroyed and the amount of time the game lasted.
+//MODIFICAR
+## Descripción
 
+EmotionsHack es un juego en el que el jugador tiene que  tiene que evitar las emociones negativas y recoger emociones positivas que aparecerán desde la parte superior. El juego termina cuando el personaje principal colisiona con una emoción negativa.
+
+
+//MODIFICAR
 ## MVP (DOM - CANVAS)
 
-- game has three ship that moves horizontally
-- ship shoots cannonballs up
-- tentacles appear randomly from the top of the screen
-- four tentacles stacking will end the game
-- cannonballs destroy tentacles
-- reload time for shooting cannonballs
-- Increasing dificulty
+- El juego tiene un personaje que se mueve en distintas posiciones de la pantalla.
+- Hay dos tipos de emociones: positivas y negativas
 
-## Backlog
+ 
+//MODIFICAR
+## Trabajo pendiente
+- Añadir marcador
+- Añadir música
+- Añadir efectos de sonidos en distintas funciones.
+- Hacer que las emociones positivas sumen puntos.
+- Hacer que las emociones negativas resten puntos.
+- Hacer que el juego incremente su dificultad a medida que suben los puntos.
 
-- add scoreboard
-- Ability to start the game on increased dificulty lvl
 
-## Data Structure
+//MODIFICAR
+## Estructura de datos
 
+
+//MODIFICAR
 # main.js
 
 - buildSplashScreen () {}
 - buildGameScreen () {}
 - buildGameOverScreen () {}
+//MODIFICAR
 
+//MODIFICAR
 # game.js
 
 - Game () {}
@@ -38,7 +49,10 @@ Kraken-Brigade is a game where the player has to move ships horizontally and sho
 - drawCanvas () {}
 - GameOver () {}
 
-# ship.js 
+
+
+//MODIFICAR
+# emocion-negativa.js 
 
 - Ship () {
     this.x;
@@ -51,7 +65,9 @@ Kraken-Brigade is a game where the player has to move ships horizontally and sho
 - shoot () {}
 - checkScreenCollision () {}
 
-# tentacle.js 
+
+//MODIFICAR
+# emocionpositiva.js 
 
 - Tentacle () {
     this.x;
@@ -63,7 +79,9 @@ Kraken-Brigade is a game where the player has to move ships horizontally and sho
 - move () {}
 - checkCollisionBotton () {}
 
-# cannonball.js 
+
+//MODIFICAR
+# personaje.js 
 
 - Cannonball () {
     this.x;
@@ -75,27 +93,30 @@ Kraken-Brigade is a game where the player has to move ships horizontally and sho
 - move () {}
 - checkCollisionTop () {}
 
-## States y States Transitions
-Definition of the different states and their transition (transition functions)
 
-- splashScreen
-- gameScreen
-- gameOverScreen
 
-## Task
+//MODIFICAR
+## Estados y funciones de transición
+//MODIFICAR
+Definición de los diferentes estados y su transición (funciones de transición).
+- Dibujar
+- Moverse
+- Comprobar colisión
 
-- main - buildDom
-- main - buildSplashScreen
-- main - addEventListener
-- main - buildGameScreen
-- main - buildGameOverScreen
-- game - startLoop
-- game - buildCanvas
-- game - updateCanvas
-- game - drawCanvas
-- tentacle - draw
-- tentacle - move
-- game - addTentacle
+
+//MODIFICAR
+## Tareas
+//MODIFICAR
+- principal - buildDom
+- principal - buildSplashScreen
+- principal - addEventListener
+- principal - buildGameScreen
+- principal - buildGameOverScreen
+- Juego - startLoop
+- Juego - buildCanvas
+- Juego - updateCanvas
+- Juego - drawCanvas
+- Juego - addTentacle
 - ship - draw
 - ship - move
 - ship - shoot
@@ -106,16 +127,24 @@ Definition of the different states and their transition (transition functions)
 - game - GameOver
 - game - addEventListener
 
+
+//MODIFICAR
 ## Links
 
+
+//MODIFICAR
 ### Trello
 [Link url](https://trello.com/b/CWviY2zv/kraken-brigade-project)
 
+
+//MODIFICAR
 ### Git
 URls for the project repo and deploy
 [Link Repo](https://github.com/jorgeberrizbeitia/kraken-brigade)
 [Link Deploy](https://jorgeberrizbeitia.github.io/kraken-brigade/)
 
-### Slides
+
+//MODIFICAR
+### Diapositivas
 URls for the project presentation (slides)
 [Link Slides.com](https://docs.google.com/presentation/d/138o01hAz-0gXepN78RsDgse12HiiuN7Fz_N_hJnI9_g/edit?usp=sharing)
