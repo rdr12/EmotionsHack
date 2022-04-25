@@ -31,6 +31,9 @@ class Game {
     this.emocionNegativaArr.forEach((eachEmocionnegativa) => {
     eachEmocionnegativa.movEmocionnegativa()
     })
+    this.emocionNegativaArr.forEach((eachEmocionnegativa) => {
+    eachEmocionnegativa.emoColision()
+    })
     
     //3.DIBUJAR LOS ELEMENTOS
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
