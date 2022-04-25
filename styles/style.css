@@ -25,6 +25,10 @@ body {
   margin: 50px;
 }
 #my-canvas,
-#gameover-screen {
+#gameover-screen,
+#score
+ {
   display: none;
 }
+
+
