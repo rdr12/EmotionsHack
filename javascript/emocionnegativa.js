@@ -24,7 +24,7 @@ class Emocionnegativa {
         this.y = this.y + (this.speed * this.ydirec)
     }
 
-    emoColision = () => {
+    emoColisionNeg = () => {
      
       if (this.x > canvas.width - this.w) {
         

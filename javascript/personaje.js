@@ -2,7 +2,7 @@ class Personaje {
 
     constructor() {
         this.x = 300;
-        this.y = 300;
+        this.y = 600;
         this.w = 50;
         this.h = 100;
         this.img = new Image();
