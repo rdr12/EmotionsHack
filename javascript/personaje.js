@@ -1,8 +1,8 @@
 class Personaje {
 
     constructor() {
-        this.x = 200;
-        this.y = 200;
+        this.x = 300;
+        this.y = 300;
         this.w = 50;
         this.h = 100;
         this.img = new Image();
@@ -34,7 +34,7 @@ class Personaje {
     }
 
     //Límite de movimiento canvas
-    
+
     movPersonajex = () => {
         if (this.x < 0) {
            this.x = 1;

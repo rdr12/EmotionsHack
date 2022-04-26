@@ -7,7 +7,7 @@ class Emocionnegativa {
       this.h = 80; 
       this.img = new Image();
       this.img.src = srcParam;
-      this.speed = 5;
+      this.speed = 2;
       this.xdirec = 1; // muevo derecha
       this.ydirec = 1; //muevo abajo
     }
@@ -43,5 +43,6 @@ class Emocionnegativa {
         this.ydirec = 1
       }
     }
-  
+
+     
 }

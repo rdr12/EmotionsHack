@@ -4,6 +4,8 @@ const startScreen = document.querySelector("#splash-screen");
 const canvas = document.querySelector("#my-canvas");
 const ctx = canvas.getContext("2d");
 const score = document.querySelector("#score");
+const gameOverScreen = document.querySelector("#gameover-screen");
+const restartBoton = document.querySelector("#restart-btn")
 let game;
 
 
@@ -13,6 +15,7 @@ const startGame = () => {
   startScreen.style.display = "none";
   canvas.style.display = "block";
   score.style.display = "block";
+  gameOverScreen.style.display= "none";
   game = new Game();
   game.gameLoop();
 };
@@ -45,3 +48,4 @@ const keyCode = (event) => {
 // * ADD EVENT LISTENERS
 startBtn.addEventListener("click", startGame);
 window.addEventListener("keydown", keyCode);
+restartBoton.addEventListener("click", startGame);
