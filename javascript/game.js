@@ -25,6 +25,7 @@ class Game {
 
       let newEmPos = new EmocionPositiva("./images/imgfeliz1.png")
       this.emocionPositivaArr.push(newEmPos)
+     
     }
   }
 
@@ -39,7 +40,7 @@ class Game {
       this.personaje.y < eachEmocionnegativa.y + eachEmocionnegativa.h &&
       this.personaje.h + this.personaje.y > eachEmocionnegativa.y) {
 
-        
+       
         this.isGameOn = false;
         canvas.style.display = "none";
         gameOverScreen.style.display = "flex";
@@ -49,17 +50,17 @@ class Game {
 
   //COLISION EMOCION POSITIVA CON EL PERSONAJE
   personColisionPos = () => {
-    this.emocionPositivaArr.forEach((eachEmocionPositiva) => {
+    this.emocionPositivaArr.forEach((eachEmocionPositiva, i) => {
        
-    if (this.personaje.x < eachEmocionPositiva.x + eachEmocionPositiva.w &&
+      if (this.personaje.x < eachEmocionPositiva.x + eachEmocionPositiva.w &&
       this.personaje.x + this.personaje.w > eachEmocionPositiva.x &&
       this.personaje.y < eachEmocionPositiva.y + eachEmocionPositiva.h &&
       this.personaje.h + this.personaje.y > eachEmocionPositiva.y) {
 
+        //console.log("colision positiva")      
         
-        this.isGameOn = true;
-        canvas.style.display = "none";
-
+        this.emocionPositivaArr.splice(i, 1);
+        
       }
     })
   }
@@ -106,8 +107,12 @@ class Game {
       this.personColisionNeg(eachChoqueEmNeg) 
     })
     //CHOQUE EMOCION POSITIVA CON EL PERSONAJE
+    this.emocionPositivaArr.forEach((eachChoqueEmPos) => {
+    this.personColisionPos(eachChoqueEmPos)
+   
+    })
 
-      
+
     //3.DIBUJAR LOS ELEMENTOS
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
     //***DIBUJO DE LAS CLASES***//
