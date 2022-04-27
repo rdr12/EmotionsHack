@@ -9,6 +9,7 @@ class EmocionPositiva {
     this.speed = 2;
     this.xdirec = 1; // muevo derecha
     this.ydirec = 1; //muevo abajo
+    
   }
 
   drawEmocionPositiva = () => {
@@ -33,4 +34,7 @@ class EmocionPositiva {
       this.ydirec = 1;
     }
   };
+
+
+  
 }

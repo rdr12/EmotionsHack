@@ -3,9 +3,7 @@ class Game {
     this.bg = new Image();
     this.bg.src = "./images/bg.png";
     this.personaje = new Personaje();
-    this.emocionNegativaArr = [
-      new Emocionnegativa("./images/imgenfadada1.png"),
-    ];
+    this.emocionNegativaArr = [new Emocionnegativa("./images/imgenfadada1.png")];
     this.emocionPositivaArr = [new EmocionPositiva("./images/imgfeliz1.png")];
     this.emocionPositivaArr1 = [new EmocionPositiva("./images/imgf2.png")];
     this.isGameOn = true;

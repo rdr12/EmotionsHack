@@ -2,8 +2,8 @@ class Personaje {
   constructor() {
     this.x = 300;
     this.y = 600;
-    this.w = 50;
-    this.h = 100;
+    this.w = 60;
+    this.h = 120;
     this.img = new Image();
     this.img.src = "./images/personaje.png";
     this.speed = 10;
