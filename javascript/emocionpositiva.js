@@ -1,8 +1,8 @@
 class EmocionPositiva {
 
     constructor(srcParam) {
-      this.x = 500; 
-      this.y = 100; 
+      this.x = Math.random() * canvas.width; 
+      this.y = Math.random() * canvas.height; 
       this.w = 50;
       this.h = 80; 
       this.img = new Image();
