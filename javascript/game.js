@@ -21,13 +21,27 @@ class Game {
   }
   //ARR EMOCION POSITIVA
   addNewEmocionPositiva = () => {
+        
+    /*if (this.emocionPositivaArr[this.emocionPositivaArris.length -1].x > canvas.width -1){
+
+      let randomPoscEmo = Math.random() * - 10
+
+      let newEmPos = new EmocionPositiva(randomPoscEmo, "./images/imgfeliz1.png")
+
+      this.emocionPositivaArr.push(newEmPos)
+      
+    }
+  }*/
+
+  
     if (this.emocionPositivaArr.length === 0){
 
       let newEmPos = new EmocionPositiva("./images/imgfeliz1.png")
       this.emocionPositivaArr.push(newEmPos)
      
-    }
+   }
   }
+
 
 
   //***COLISIONES CON EL PERSONAJE***//
@@ -57,9 +71,10 @@ class Game {
       this.personaje.y < eachEmocionPositiva.y + eachEmocionPositiva.h &&
       this.personaje.h + this.personaje.y > eachEmocionPositiva.y) {
 
-        //console.log("colision positiva")      
+          
         
         this.emocionPositivaArr.splice(i, 1);
+        this.addNewEmocionPositiva()
         
       }
     })
@@ -81,10 +96,12 @@ class Game {
     this.personaje.abajMov()
     this.personaje.movPersonajex()
     this.personaje.movPersonajey()
+
     //MOVIMIENTO DE LA EMOCION NEGATIVA
     this.emocionNegativaArr.forEach((eachEmocionnegativa) => {
     eachEmocionnegativa.movEmocionnegativa()
     })
+
     //MOVIMIENTO DE LA EMOCION POSITIVA
     this.emocionPositivaArr.forEach((eachEmocionPositiva) => {
       eachEmocionPositiva.movEmocionPositiva()
@@ -115,13 +132,17 @@ class Game {
 
     //3.DIBUJAR LOS ELEMENTOS
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
+
     //***DIBUJO DE LAS CLASES***//
+
     //DIBUJO PERSONAJE
     this.personaje.drawPersonaje()
+
     //DIBUJO EMOCION NEGATIVA
     this.emocionNegativaArr.forEach((eachEmNeg) => {
     eachEmNeg.drawEmocionnegativa()
     })
+    
     //DIBUJO EMOCION POSITIVA
     this.emocionPositivaArr.forEach((eachnewEmPos) =>{
     eachnewEmPos.drawEmocionPositiva()
