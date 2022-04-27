@@ -23,11 +23,8 @@ class Game {
   addNewEmocionPositiva = () => {
         
     /*if (this.emocionPositivaArr[this.emocionPositivaArris.length -1].x > canvas.width -1){
-
       let randomPoscEmo = Math.random() * - 10
-
       let newEmPos = new EmocionPositiva(randomPoscEmo, "./images/imgfeliz1.png")
-
       this.emocionPositivaArr.push(newEmPos)
       
     }
