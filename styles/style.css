@@ -26,13 +26,10 @@ body {
 }
 #my-canvas,
 #gameover-screen,
-#score
- {
+#score {
   display: none;
 }
 
-#score{
+#score {
   font-size: 25px;
 }
-
-
