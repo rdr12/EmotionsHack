@@ -43,6 +43,7 @@ class EmocionPositiva {
         this.ydirec = 1
       }
     }
+    
 
      
 }

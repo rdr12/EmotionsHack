@@ -62,6 +62,7 @@ class Game {
         this.isGameOn = false;
         canvas.style.display = "none";
         gameOverScreen.style.display = "flex";
+        audio.pause()
       }
     })
   }
@@ -81,6 +82,7 @@ class Game {
         
         this.emocionPositivaArr.splice(i, 1);
         this.addNewEmocionPositiva()
+        
         
       }
     })
