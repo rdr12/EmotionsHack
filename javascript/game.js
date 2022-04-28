@@ -41,6 +41,7 @@ class Game {
 
   //***COLISIONES CON EL PERSONAJE***//
   //COLISION EMOCION NEGATIVA CON EL PERSONAJE
+  //GAME OVER
 
   personColisionNeg = () => {
     this.emocionNegativaArr.forEach((eachEmocionnegativa, i) => {
@@ -55,21 +56,24 @@ class Game {
 
         this.emocionNegativaArr.splice(i, 1);
         this.addNewEmocionnegativa();
-        //scoreCero.innerText = this.score; 
+         
              
                
       }else if(this.score < 0){
         this.isGameOn = false;
         canvas.style.display = "none";
         gameOverScreen.style.display = "flex";
-        scoreTitle.style.display = "block";
+        scoreTitle.style.display = "none";
+        this.score = 0;
         audio.pause();
+        scoreCafe.style.display = "block";
 
         }
     });
   };
 
   //COLISION EMOCION POSITIVA CON EL PERSONAJE
+ 
 
   personColisionPos = () => {
     this.emocionPositivaArr.forEach((eachEmocionPositiva, i) => {

@@ -31,10 +31,11 @@ body {
 
 #my-canvas,
 #gameover-screen,
-#score{
+#score, #scoreCafe{
   display: none;
 }
 
 #score {
   font-size: 25px;
 }
+

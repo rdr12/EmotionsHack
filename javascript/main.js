@@ -5,6 +5,7 @@ const canvas = document.querySelector("#my-canvas");
 const ctx = canvas.getContext("2d");
 const scoreTitle = document.querySelector("#score")
 const scoreCero = document.querySelector("#score span");
+const scoreCafe = document.querySelector("#scoreCafe");
 const gameOverScreen = document.querySelector("#gameover-screen");
 const restartBoton = document.querySelector("#restart-btn");
 const audio = new Audio("./audio/musicgame.mp3");
@@ -15,6 +16,7 @@ const startGame = () => {
   startScreen.style.display = "none";
   canvas.style.display = "block";
   scoreTitle.style.display = "block";
+  scoreCafe.style.display = "none";
   scoreCero.innerText = 0;
   gameOverScreen.style.display = "none";
   audio.play();
