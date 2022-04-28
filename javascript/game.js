@@ -52,7 +52,7 @@ class Game {
         this.personaje.h + this.personaje.y > eachEmocionnegativa.y
       ) {
 
-        this.score = this.score - 30;
+        this.score = this.score - 50;
 
         this.emocionNegativaArr.splice(i, 1);
         this.addNewEmocionnegativa();
