@@ -3,12 +3,16 @@ class Game {
     this.bg = new Image();
     this.bg.src = "./images/bg.png";
     this.personaje = new Personaje();
-    this.emocionNegativaArr = [new Emocionnegativa("./images/imgenfadada1.png")];
+    this.emocionNegativaArr = [
+      new Emocionnegativa("./images/imgenfadada1.png"),
+    ];
     this.emocionPositivaArr = [new EmocionPositiva("./images/imgfeliz1.png")];
     this.emocionPositivaArr1 = [new EmocionPositiva("./images/imgf2.png")];
     this.isGameOn = true;
     this.score = 0;
   }
+
+  //PUNTUACION
 
   //***CREACION DE ARRAYS***/
 
@@ -39,18 +43,29 @@ class Game {
   //COLISION EMOCION NEGATIVA CON EL PERSONAJE
 
   personColisionNeg = () => {
-    this.emocionNegativaArr.forEach((eachEmocionnegativa) => {
+    this.emocionNegativaArr.forEach((eachEmocionnegativa, i) => {
       if (
         this.personaje.x < eachEmocionnegativa.x + eachEmocionnegativa.w &&
         this.personaje.x + this.personaje.w > eachEmocionnegativa.x &&
         this.personaje.y < eachEmocionnegativa.y + eachEmocionnegativa.h &&
         this.personaje.h + this.personaje.y > eachEmocionnegativa.y
       ) {
+
+        this.score = this.score - 30;
+
+        this.emocionNegativaArr.splice(i, 1);
+        this.addNewEmocionnegativa();
+        //scoreCero.innerText = this.score; 
+             
+               
+      }else if(this.score < 0){
         this.isGameOn = false;
         canvas.style.display = "none";
         gameOverScreen.style.display = "flex";
+        scoreTitle.style.display = "block";
         audio.pause();
-      }
+
+        }
     });
   };
 
@@ -66,6 +81,9 @@ class Game {
       ) {
         this.emocionPositivaArr.splice(i, 1);
         this.addNewEmocionPositiva();
+
+        this.score = this.score + 25;
+        
       }
     });
   };
@@ -80,6 +98,9 @@ class Game {
       ) {
         this.emocionPositivaArr1.splice(i, 1);
         this.addNewEmocionPositiva1();
+
+        this.score = this.score + 25;
+       
       }
     });
   };
@@ -148,6 +169,8 @@ class Game {
       this.colisionArr2(eachChoqueEmPos);
     });
 
+    scoreCero.innerText = Math.floor (this.score)
+
     //3.DIBUJAR LOS ELEMENTOS
     ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height);
 
@@ -171,6 +194,10 @@ class Game {
       eachnewEmPos.drawEmocionPositiva();
     });
 
-    requestAnimationFrame(this.gameLoop);
+    // CONTROL Y RECURSION
+
+    if (this.isGameOn) {
+      requestAnimationFrame(this.gameLoop);
+    }
   };
 }

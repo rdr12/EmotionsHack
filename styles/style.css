@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  background-color: lightgray;
+  background:url("../images/fondoWeb.png") no-repeat center center fixed;
+  background-size: cover;
+
 }
 
 #my-canvas {
@@ -9,12 +11,14 @@ body {
 
 #start-btn,
 #restart-btn {
-  background-color: green;
-  color: white;
-  padding: 20px;
-  font-size: 20px;
-  margin-top: 40px;
-  border-radius: 10px;
+  background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .container {
@@ -24,9 +28,10 @@ body {
   align-items: center;
   margin: 50px;
 }
+
 #my-canvas,
 #gameover-screen,
-#score {
+#score{
   display: none;
 }
 

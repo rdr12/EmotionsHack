@@ -6,7 +6,7 @@ class Personaje {
     this.h = 120;
     this.img = new Image();
     this.img.src = "./images/personaje.png";
-    this.speed = 10;
+    this.speed = 15;
   }
   drawPersonaje = () => {
     ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
