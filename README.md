@@ -1,150 +1,121 @@
-//MODIFICAR
+
 # EmotionsHack
 
-
-//MODIFICAR
 ## Descripción
 
-EmotionsHack es un juego en el que el jugador tiene que  tiene que evitar las emociones negativas y recoger emociones positivas que aparecerán desde la parte superior. El juego termina cuando el personaje principal colisiona con una emoción negativa.
+EmotionsHack es un juego en el que el jugador tiene que  tiene que esquivar las emociones negativas y recoger emociones positivas que aparecerán de forma aleatoria. El juego termina cuando el jugador se queda sin puntos.
 
 
-//MODIFICAR
 ## MVP (DOM - CANVAS)
 
 - El juego tiene un personaje que se mueve en distintas posiciones de la pantalla.
-- Hay dos tipos de emociones: positivas y negativas
+- Hay dos tipos de emociones: positivas y negativas.
 
  
-//MODIFICAR
+
 ## Trabajo pendiente
-- Añadir marcador
-- Añadir música
-- Añadir efectos de sonidos en distintas funciones.
-- Hacer que las emociones positivas sumen puntos.
-- Hacer que las emociones negativas resten puntos.
 - Hacer que el juego incremente su dificultad a medida que suben los puntos.
 
 
-//MODIFICAR
+
 ## Estructura de datos
 
-
-//MODIFICAR
 # main.js
 
-- buildSplashScreen () {}
-- buildGameScreen () {}
-- buildGameOverScreen () {}
-//MODIFICAR
+- Global Variables.
+- State Management Functions:
+- startGame () {}
+- keyCode  () {}
+- Add Event Listeners.
 
-//MODIFICAR
+
+
 # game.js
 
 - Game () {}
-- starLoop () {}
-- checkCollisions () {}
-- addTentacle () {}
-- clearCanvas () {}
-- updateCanvas () {}
-- drawCanvas () {}
-- GameOver () {}
+- addNewEmocionnegativa  () {}
+- ddNewEmocionPositiva () {}
+- addNewEmocionPositiva1 () {}
+- ersonColisionNeg () {}
+- personColisionPos () {}
+- colisionArr2 () {}
+- gameLoop () {}
 
 
-
-//MODIFICAR
 # emocion-negativa.js 
 
-- Ship () {
+- Emocionnegativa () {
     this.x;
     this.y;
-    this.direction;
-    this.size
+    this.w;
+    this.h
+    this.img
+    this.img.src
+    this.speed
+    this.xdirec
+    this.ydirec
 }
-- draw () {}
-- move () {}
-- shoot () {}
-- checkScreenCollision () {}
+- drawEmocionnegativa() {}
+- movEmocionnegativa () {}
+- emoColisionNeg () {}
 
 
-//MODIFICAR
 # emocionpositiva.js 
 
-- Tentacle () {
+- EmocionPositiva () {
     this.x;
     this.y;
-    this.direction;
-    this.size
+    this.w;
+    this.h;
+    this.img;
+    this.img.src;
+    this.speed;
+    this.xdirec;
+    this.ydirec;
 }
-- draw () {}
-- move () {}
-- checkCollisionBotton () {}
+- drawEmocionPositiva () {}
+- movEmocionPositiva () {}
+- emoColisionPos () {}
 
 
-//MODIFICAR
 # personaje.js 
 
-- Cannonball () {
+- Personaje () {
     this.x;
     this.y;
-    this.direction;
-    this.size
+    this.w;
+    this.h;
+    this.img;
+    this.img.src;
+    this.speed;
 }
-- draw () {}
-- move () {}
-- checkCollisionTop () {}
+- drawPersonaje () {}
+- atrasMov () {}
+- delanteMov () {}
+- abajMov
+- arrMov
+-  movPersonajex
+-  movPersonajey
 
 
 
-//MODIFICAR
-## Estados y funciones de transición
-//MODIFICAR
+## Main
 Definición de los diferentes estados y su transición (funciones de transición).
 - Dibujar
 - Moverse
 - Comprobar colisión
 
 
-//MODIFICAR
-## Tareas
-//MODIFICAR
-- principal - buildDom
-- principal - buildSplashScreen
-- principal - addEventListener
-- principal - buildGameScreen
-- principal - buildGameOverScreen
-- Juego - startLoop
-- Juego - buildCanvas
-- Juego - updateCanvas
-- Juego - drawCanvas
-- Juego - addTentacle
-- ship - draw
-- ship - move
-- ship - shoot
-- game - addShip
-- cannonball - draw
-- cannonball - move
-- game - checkCollision
-- game - GameOver
-- game - addEventListener
 
-
-//MODIFICAR
 ## Links
 
-
-//MODIFICAR
-### Trello
-[Link url](https://trello.com/b/CWviY2zv/kraken-brigade-project)
-
-
-//MODIFICAR
 ### Git
 URls for the project repo and deploy
-[Link Repo](https://github.com/jorgeberrizbeitia/kraken-brigade)
-[Link Deploy](https://jorgeberrizbeitia.github.io/kraken-brigade/)
+[Link Repo](https://github.com/rdr12/EmotionsHack.git)
+[Link Deploy](https://rdr12.github.io/EmotionsHack/)
 
 
-//MODIFICAR
+
 ### Diapositivas
 URls for the project presentation (slides)
-[Link Slides.com](https://docs.google.com/presentation/d/138o01hAz-0gXepN78RsDgse12HiiuN7Fz_N_hJnI9_g/edit?usp=sharing)
+[Link Slides.com]https://docs.google.com/presentation/d/1drLT5ugGRLnnQEjTMupDOOMOrsr2WV44ZaJZ-Geqsgc/edit?usp=sharing
